@@ -1,0 +1,24 @@
+<div (click)="filtrarCategoria('Deportes')">
+    Deportes
+</div>
+
+<div (click)="filtrarCategoria('Electrónica')">
+    Electrónica
+</div>
+
+<div (click)="filtrarCategoria('Indumentaria')">
+    Indumentaria
+</div>
+
+<div (click)="mostrarTodos()">
+    Todos
+</div>
+
+
+<div class="contenedor-productos">
+
+  @for (producto of productosFiltrados; track producto.id) {
+    <app-producto-card [producto]="producto"></app-producto-card>
+  }
+
+</div>
